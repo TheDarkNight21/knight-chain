@@ -1,0 +1,8 @@
+# ninja log v6
+1	488	1734298741144284506	CMakeFiles/firstBlockchain.dir/main.cpp.o	67f48ed9773b2696
+490	526	1734298741633590649	firstBlockchain	d65b50a71a1ba003
+9	537	1734305424689218691	CMakeFiles/firstBlockchain.dir/main.cpp.o	67f48ed9773b2696
+11	540	1734305424690545439	CMakeFiles/firstBlockchain.dir/sha256.cpp.o	32bbe9359d28a276
+11	542	1734305424690699022	CMakeFiles/firstBlockchain.dir/Block.cpp.o	f4aa1b288061f06e
+7	404	1734305439927141161	CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o	201f72599710b886
+405	523	1734305440324481255	firstBlockchain	5604ea637a806ed
