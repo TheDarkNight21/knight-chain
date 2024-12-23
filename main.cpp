@@ -1,18 +1,27 @@
-#include <iostream>
+#include "Block.h"
+#include <vector>
+
 #include "Blockchain.h"
 using namespace std;
 
 int main() {
-    Blockchain bChain = Blockchain();
+    // Create messages
+    Message msg1 = {"AlicePublicKey", "BobPublicKey", "EncryptedHelloBob"};
+    Message msg2 = {"BobPublicKey", "AlicePublicKey", "EncryptedHelloAlice"};
 
-    cout << "Mining block 1..." << endl;
-    bChain.AddBlock(Block(1, "Block 1 Data"));
+    // Create a block with these messages
+    vector<Message> messages = {msg1, msg2};
+    Block newBlock(1, messages);
 
-    cout << "Mining block 2..." << endl;
-    bChain.AddBlock(Block(2, "Block 2 Data"));
+    // Mine the block
+    newBlock.MineBlock(4);
 
-    cout << "Mining block 3..." << endl;
-    bChain.AddBlock(Block(3, "Block 3 Data"));
+    // Print the block hash
+    cout << "block Hash: " << newBlock.getHash() << endl;
+
+    Blockchain knightChain;
+    knightChain.AddBlock(newBlock);
+    cout << "block added." << endl;
 
     return 0;
 }

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Block::Block(uint32_t nIndexIn, const string &sDataIn) : _nIndex(nIndexIn), _sData(sDataIn) { // copy contents of parameters into variables _nIndex and _sData
+Block::Block(uint32_t nIndexIn, const vector<Message> &messagesIn) : _nIndex(nIndexIn), _messages(messagesIn) { // copy contents of parameters into variables _nIndex and _sData
     _nNonce = -1; // set to -1 for now
     _tTime = time(nullptr); // current time
 }
@@ -36,10 +36,15 @@ void Block::MineBlock(uint32_t nDifficulty) {
 
 inline string Block::_CalculateHash() const {
     stringstream ss;
-    ss << _nIndex << _tTime << _sData << _nNonce << sPrevHash;
+    ss << _nIndex << _tTime;
+
+    for (const auto &message : _messages) {
+        ss << message.toString();
+    }
+
+    ss << _nNonce << sPrevHash;
 
     return sha256(ss.str());
 }
-
 
 

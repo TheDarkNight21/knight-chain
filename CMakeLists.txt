@@ -9,4 +9,6 @@ add_executable(firstBlockchain main.cpp
         sha256.h
         sha256.cpp
         Block.cpp
-        Blockchain.cpp)
+        Blockchain.cpp
+        CryptoUtils.h
+        User.h)

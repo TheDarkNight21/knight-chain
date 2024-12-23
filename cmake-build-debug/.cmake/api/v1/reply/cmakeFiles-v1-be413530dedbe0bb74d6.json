@@ -150,8 +150,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/farisallaf/CLionProjects/firstBlockchain/cmake-build-debug",
-		"source" : "/Users/farisallaf/CLionProjects/firstBlockchain"
+		"build" : "/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug",
+		"source" : "/Users/farisallaf/CLionProjects/knight-chain"
 	},
 	"version" : 
 	{

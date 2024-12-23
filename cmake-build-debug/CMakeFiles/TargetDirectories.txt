@@ -1,3 +1,3 @@
-/Users/farisallaf/CLionProjects/firstBlockchain/cmake-build-debug/CMakeFiles/firstBlockchain.dir
-/Users/farisallaf/CLionProjects/firstBlockchain/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/farisallaf/CLionProjects/firstBlockchain/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles/firstBlockchain.dir
+/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles/rebuild_cache.dir
