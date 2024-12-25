@@ -3,7 +3,7 @@
 //
 
 #include "Block.h"
-#include "sha256.h"
+#include "../cryptoUtils/sha256.h"
 #include <sstream>
 
 using namespace std;

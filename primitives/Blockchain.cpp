@@ -5,8 +5,8 @@
 #include "Blockchain.h"
 
 Blockchain::Blockchain() {
-    Message init1 = {"sender1", "receiver1", "genesis block1"};
-    Message init2 = {"sender2", "receiver2", "genesis block2"};
+    Message init1 = {"sender1", "receiver1", "genesis block1", "signature1"};
+    Message init2 = {"sender2", "receiver2", "genesis block2", "signature2"};
     vector<Message> msg = { init1, init2 };
     _vChain.emplace_back(Block(0, msg)); // genesis block is created and placed onto the vchain vector
     /* since the blockchain must start somewhere we have to create a block for the next block as reference, AKA the genesis block

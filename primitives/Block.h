@@ -12,11 +12,12 @@ using namespace std;
 struct Message {
     string sender;    // Public key of the sender
     string receiver;  // Public key of the receiver
-    string content;   // Encrypted message content
+    string encryptedContent;   // Encrypted message content
+    string signature;
 
     // Convert a message to a string for hashing
     string toString() const {
-        return sender + receiver + content;
+        return sender + receiver + encryptedContent;
     }
 };
 
