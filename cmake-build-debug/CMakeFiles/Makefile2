@@ -81,12 +81,12 @@ clean: CMakeFiles/firstBlockchain.dir/clean
 CMakeFiles/firstBlockchain.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target firstBlockchain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target firstBlockchain"
 .PHONY : CMakeFiles/firstBlockchain.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/firstBlockchain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/firstBlockchain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/firstBlockchain.dir/rule

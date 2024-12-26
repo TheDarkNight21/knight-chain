@@ -7,9 +7,11 @@
 #include <openssl/pem.h>
 #include <openssl/err.h>
 #include <fstream>
+#include <iostream>
 #include <stdexcept>
 #include <vector>
 #include <sstream>
+#include "../cryptoUtils/sha256.h"
 
 using namespace std;
 
@@ -57,10 +59,10 @@ string RSAUtil::encrypt(const string& plaintext, const string& publicKeyFile) {
         throw runtime_error("Failed to open public key file.");
     }
 
-    RSA* rsa = PEM_read_RSA_PUBKEY(publicFile, nullptr, nullptr, nullptr);
+    RSA* rsa = PEM_read_RSAPublicKey(publicFile, nullptr, nullptr, nullptr);
     fclose(publicFile);
     if (!rsa) {
-        throw runtime_error("Failed to read public key.");
+        throw runtime_error("Failed to read private key.");
     }
 
     vector<unsigned char> encrypted(RSA_size(rsa));
@@ -99,4 +101,28 @@ string RSAUtil::decrypt(const string& ciphertext, const string& privateKeyFile) 
     }
 
     return string(decrypted.begin(), decrypted.begin() + result);
+}
+
+string RSAUtil::sign(const string &message, const string &privateKeyFile) {
+    // open private key file
+    FILE* privateFile = fopen(privateKeyFile.c_str(), "rb");
+    if (!privateFile) {
+        throw runtime_error("Failed to open private key file.");
+    }
+    // read private key from file
+    RSA* rsa = PEM_read_RSAPrivateKey(privateFile, nullptr, nullptr, nullptr);
+    cout << rsa << endl;
+    fclose(privateFile);
+    if (!rsa) {
+        throw runtime_error("Failed to read private key.");
+    }
+
+    // hash message
+    string hashedMsg = sha256(message);
+
+    // sign the hashed message
+    string signedMsg = encrypt(hashedMsg, privateKeyFile);
+
+    return signedMsg;
+
 }

@@ -16,7 +16,7 @@ public:
     static string decrypt(const string& ciphertext, const string& privateKeyFile);
 
     // signs message using senders private key
-    static string sign(const string& plaintext, const string& privateKeyFile);
+    static string sign(const string& message, const string& privateKeyFile);
 };
 
 #endif // RSA_H

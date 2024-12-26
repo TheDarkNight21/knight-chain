@@ -10,14 +10,16 @@
 using namespace std;
 
 struct Message {
-    string sender;    // Public key of the sender
-    string receiver;  // Public key of the receiver
-    string encryptedContent;   // Encrypted message content
+    string senderPublicKey;    // Public key of the sender
+    string recipientPublicKey;  // Public key of the receiver
+    string encryptedMessage;   // Encrypted message content
+    string messageHash;
+    string messageID;
     string signature;
 
     // Convert a message to a string for hashing
     string toString() const {
-        return sender + receiver + encryptedContent;
+        return senderPublicKey + recipientPublicKey + encryptedMessage + messageHash + messageID + signature;
     }
 };
 

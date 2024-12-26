@@ -83,65 +83,99 @@ CMakeFiles/firstBlockchain.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/main.cpp -o CMakeFiles/firstBlockchain.dir/main.cpp.s
 
-CMakeFiles/firstBlockchain.dir/sha256.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
-CMakeFiles/firstBlockchain.dir/sha256.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/sha256.cpp
-CMakeFiles/firstBlockchain.dir/sha256.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/firstBlockchain.dir/sha256.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/sha256.cpp.o -MF CMakeFiles/firstBlockchain.dir/sha256.cpp.o.d -o CMakeFiles/firstBlockchain.dir/sha256.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/sha256.cpp
+CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
+CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/sha256.cpp
+CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o -MF CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o.d -o CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/sha256.cpp
 
-CMakeFiles/firstBlockchain.dir/sha256.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/sha256.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/sha256.cpp > CMakeFiles/firstBlockchain.dir/sha256.cpp.i
+CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/sha256.cpp > CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.i
 
-CMakeFiles/firstBlockchain.dir/sha256.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/sha256.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/sha256.cpp -o CMakeFiles/firstBlockchain.dir/sha256.cpp.s
+CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/sha256.cpp -o CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.s
 
-CMakeFiles/firstBlockchain.dir/Block.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
-CMakeFiles/firstBlockchain.dir/Block.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/Block.cpp
-CMakeFiles/firstBlockchain.dir/Block.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/firstBlockchain.dir/Block.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/Block.cpp.o -MF CMakeFiles/firstBlockchain.dir/Block.cpp.o.d -o CMakeFiles/firstBlockchain.dir/Block.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/Block.cpp
+CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
+CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/primitives/Block.cpp
+CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o -MF CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o.d -o CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/primitives/Block.cpp
 
-CMakeFiles/firstBlockchain.dir/Block.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/Block.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/Block.cpp > CMakeFiles/firstBlockchain.dir/Block.cpp.i
+CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/primitives/Block.cpp > CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.i
 
-CMakeFiles/firstBlockchain.dir/Block.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/Block.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/Block.cpp -o CMakeFiles/firstBlockchain.dir/Block.cpp.s
+CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/primitives/Block.cpp -o CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.s
 
-CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
-CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/Blockchain.cpp
-CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o -MF CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o.d -o CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/Blockchain.cpp
+CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
+CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/primitives/Blockchain.cpp
+CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o -MF CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o.d -o CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/primitives/Blockchain.cpp
 
-CMakeFiles/firstBlockchain.dir/Blockchain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/Blockchain.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/Blockchain.cpp > CMakeFiles/firstBlockchain.dir/Blockchain.cpp.i
+CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/primitives/Blockchain.cpp > CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.i
 
-CMakeFiles/firstBlockchain.dir/Blockchain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/Blockchain.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/Blockchain.cpp -o CMakeFiles/firstBlockchain.dir/Blockchain.cpp.s
+CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/primitives/Blockchain.cpp -o CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.s
+
+CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
+CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/rsa.cpp
+CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o -MF CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o.d -o CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/rsa.cpp
+
+CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/rsa.cpp > CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.i
+
+CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/rsa.cpp -o CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.s
+
+CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o: CMakeFiles/firstBlockchain.dir/flags.make
+CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o: /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/aes.cpp
+CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o: CMakeFiles/firstBlockchain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o -MF CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o.d -o CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o -c /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/aes.cpp
+
+CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/aes.cpp > CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.i
+
+CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/farisallaf/CLionProjects/knight-chain/cryptoUtils/aes.cpp -o CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.s
 
 # Object files for target firstBlockchain
 firstBlockchain_OBJECTS = \
 "CMakeFiles/firstBlockchain.dir/main.cpp.o" \
-"CMakeFiles/firstBlockchain.dir/sha256.cpp.o" \
-"CMakeFiles/firstBlockchain.dir/Block.cpp.o" \
-"CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o"
+"CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o" \
+"CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o" \
+"CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o" \
+"CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o" \
+"CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o"
 
 # External object files for target firstBlockchain
 firstBlockchain_EXTERNAL_OBJECTS =
 
 firstBlockchain: CMakeFiles/firstBlockchain.dir/main.cpp.o
-firstBlockchain: CMakeFiles/firstBlockchain.dir/sha256.cpp.o
-firstBlockchain: CMakeFiles/firstBlockchain.dir/Block.cpp.o
-firstBlockchain: CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o
+firstBlockchain: CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o
+firstBlockchain: CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o
+firstBlockchain: CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o
+firstBlockchain: CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o
+firstBlockchain: CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o
 firstBlockchain: CMakeFiles/firstBlockchain.dir/build.make
+firstBlockchain: /opt/homebrew/Cellar/openssl@3/3.4.0/lib/libssl.dylib
+firstBlockchain: /opt/homebrew/Cellar/openssl@3/3.4.0/lib/libcrypto.dylib
 firstBlockchain: CMakeFiles/firstBlockchain.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable firstBlockchain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable firstBlockchain"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/firstBlockchain.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

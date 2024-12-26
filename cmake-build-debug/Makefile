@@ -129,53 +129,77 @@ firstBlockchain/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/build
 .PHONY : firstBlockchain/fast
 
-Block.o: Block.cpp.o
-.PHONY : Block.o
+cryptoUtils/aes.o: cryptoUtils/aes.cpp.o
+.PHONY : cryptoUtils/aes.o
 
 # target to build an object file
-Block.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/Block.cpp.o
-.PHONY : Block.cpp.o
+cryptoUtils/aes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.o
+.PHONY : cryptoUtils/aes.cpp.o
 
-Block.i: Block.cpp.i
-.PHONY : Block.i
+cryptoUtils/aes.i: cryptoUtils/aes.cpp.i
+.PHONY : cryptoUtils/aes.i
 
 # target to preprocess a source file
-Block.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/Block.cpp.i
-.PHONY : Block.cpp.i
+cryptoUtils/aes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.i
+.PHONY : cryptoUtils/aes.cpp.i
 
-Block.s: Block.cpp.s
-.PHONY : Block.s
+cryptoUtils/aes.s: cryptoUtils/aes.cpp.s
+.PHONY : cryptoUtils/aes.s
 
 # target to generate assembly for a file
-Block.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/Block.cpp.s
-.PHONY : Block.cpp.s
+cryptoUtils/aes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/aes.cpp.s
+.PHONY : cryptoUtils/aes.cpp.s
 
-Blockchain.o: Blockchain.cpp.o
-.PHONY : Blockchain.o
+cryptoUtils/rsa.o: cryptoUtils/rsa.cpp.o
+.PHONY : cryptoUtils/rsa.o
 
 # target to build an object file
-Blockchain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/Blockchain.cpp.o
-.PHONY : Blockchain.cpp.o
+cryptoUtils/rsa.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.o
+.PHONY : cryptoUtils/rsa.cpp.o
 
-Blockchain.i: Blockchain.cpp.i
-.PHONY : Blockchain.i
+cryptoUtils/rsa.i: cryptoUtils/rsa.cpp.i
+.PHONY : cryptoUtils/rsa.i
 
 # target to preprocess a source file
-Blockchain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/Blockchain.cpp.i
-.PHONY : Blockchain.cpp.i
+cryptoUtils/rsa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.i
+.PHONY : cryptoUtils/rsa.cpp.i
 
-Blockchain.s: Blockchain.cpp.s
-.PHONY : Blockchain.s
+cryptoUtils/rsa.s: cryptoUtils/rsa.cpp.s
+.PHONY : cryptoUtils/rsa.s
 
 # target to generate assembly for a file
-Blockchain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/Blockchain.cpp.s
-.PHONY : Blockchain.cpp.s
+cryptoUtils/rsa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/rsa.cpp.s
+.PHONY : cryptoUtils/rsa.cpp.s
+
+cryptoUtils/sha256.o: cryptoUtils/sha256.cpp.o
+.PHONY : cryptoUtils/sha256.o
+
+# target to build an object file
+cryptoUtils/sha256.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.o
+.PHONY : cryptoUtils/sha256.cpp.o
+
+cryptoUtils/sha256.i: cryptoUtils/sha256.cpp.i
+.PHONY : cryptoUtils/sha256.i
+
+# target to preprocess a source file
+cryptoUtils/sha256.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.i
+.PHONY : cryptoUtils/sha256.cpp.i
+
+cryptoUtils/sha256.s: cryptoUtils/sha256.cpp.s
+.PHONY : cryptoUtils/sha256.s
+
+# target to generate assembly for a file
+cryptoUtils/sha256.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/cryptoUtils/sha256.cpp.s
+.PHONY : cryptoUtils/sha256.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -201,29 +225,53 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-sha256.o: sha256.cpp.o
-.PHONY : sha256.o
+primitives/Block.o: primitives/Block.cpp.o
+.PHONY : primitives/Block.o
 
 # target to build an object file
-sha256.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/sha256.cpp.o
-.PHONY : sha256.cpp.o
+primitives/Block.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o
+.PHONY : primitives/Block.cpp.o
 
-sha256.i: sha256.cpp.i
-.PHONY : sha256.i
+primitives/Block.i: primitives/Block.cpp.i
+.PHONY : primitives/Block.i
 
 # target to preprocess a source file
-sha256.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/sha256.cpp.i
-.PHONY : sha256.cpp.i
+primitives/Block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.i
+.PHONY : primitives/Block.cpp.i
 
-sha256.s: sha256.cpp.s
-.PHONY : sha256.s
+primitives/Block.s: primitives/Block.cpp.s
+.PHONY : primitives/Block.s
 
 # target to generate assembly for a file
-sha256.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/sha256.cpp.s
-.PHONY : sha256.cpp.s
+primitives/Block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.s
+.PHONY : primitives/Block.cpp.s
+
+primitives/Blockchain.o: primitives/Blockchain.cpp.o
+.PHONY : primitives/Blockchain.o
+
+# target to build an object file
+primitives/Blockchain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o
+.PHONY : primitives/Blockchain.cpp.o
+
+primitives/Blockchain.i: primitives/Blockchain.cpp.i
+.PHONY : primitives/Blockchain.i
+
+# target to preprocess a source file
+primitives/Blockchain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.i
+.PHONY : primitives/Blockchain.cpp.i
+
+primitives/Blockchain.s: primitives/Blockchain.cpp.s
+.PHONY : primitives/Blockchain.s
+
+# target to generate assembly for a file
+primitives/Blockchain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.s
+.PHONY : primitives/Blockchain.cpp.s
 
 # Help Target
 help:
@@ -234,18 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... firstBlockchain"
-	@echo "... Block.o"
-	@echo "... Block.i"
-	@echo "... Block.s"
-	@echo "... Blockchain.o"
-	@echo "... Blockchain.i"
-	@echo "... Blockchain.s"
+	@echo "... cryptoUtils/aes.o"
+	@echo "... cryptoUtils/aes.i"
+	@echo "... cryptoUtils/aes.s"
+	@echo "... cryptoUtils/rsa.o"
+	@echo "... cryptoUtils/rsa.i"
+	@echo "... cryptoUtils/rsa.s"
+	@echo "... cryptoUtils/sha256.o"
+	@echo "... cryptoUtils/sha256.i"
+	@echo "... cryptoUtils/sha256.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... sha256.o"
-	@echo "... sha256.i"
-	@echo "... sha256.s"
+	@echo "... primitives/Block.o"
+	@echo "... primitives/Block.i"
+	@echo "... primitives/Block.s"
+	@echo "... primitives/Blockchain.o"
+	@echo "... primitives/Blockchain.i"
+	@echo "... primitives/Blockchain.s"
 .PHONY : help
 
 
