@@ -75,8 +75,16 @@ int main() {
         // encrypt aes symmetric key with recipients public RSA key
         cout << "public key file: " << publicKeyFile << "\n";
         string ciphertext_to_string = AES::CiphertextToHex(ciphertext);
-        string encryptedSymmetricKey = RSAUtil::encrypt(ciphertext_to_string, publicKeyFile);
+        string aesKey(reinterpret_cast<const char*>(key.data()), key.size());
+        string encryptedSymmetricKey = RSAUtil::encrypt(aesKey, publicKeyFile);
         cout << encryptedSymmetricKey << endl;
+
+        // decrypt aes symmetric key (for testing decrypt function)
+        string decryptedSymmetricKey = RSAUtil::decrypt(encryptedSymmetricKey, privateKeyFile);
+        cout << "Decrypted Symmetric Key: " << decryptedSymmetricKey << endl;
+
+        // Convert decrypted symmetric key back to vector<unsigned char>
+        vector<unsigned char> decryptedKey(decryptedSymmetricKey.begin(), decryptedSymmetricKey.end());
 
         // send rsa encrypted aes key along with aes encrypted message to recipient
 
