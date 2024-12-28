@@ -3,6 +3,9 @@
 //
 
 #include "aes.h"
+#include <iomanip>
+#include <sstream>
+
 
 AES::AES(const AESKeyLength keyLength) {
   switch (keyLength) {
@@ -387,6 +390,21 @@ void AES::printHexVector(std::vector<unsigned char> a) {
   for (unsigned int i = 0; i < a.size(); i++) {
     printf("%02x ", a[i]);
   }
+}
+
+std::string AES::CiphertextToHex(const std::vector<unsigned char> &ciphertext) {
+  std::ostringstream hexStream;
+  for (unsigned char byte : ciphertext) {
+    hexStream << std::hex << std::setw(2) << std::setfill('0') << (int)byte;
+  }
+  return hexStream.str();
+}
+
+std::vector<unsigned char> AES::PadMessage(const std::string &message) {
+  std::vector<unsigned char> paddedMessage(message.begin(), message.end());
+  size_t paddingLength = 16 - (message.size() % 16);
+  paddedMessage.insert(paddedMessage.end(), paddingLength, static_cast<unsigned char>(paddingLength));
+  return paddedMessage;
 }
 
 std::vector<unsigned char> AES::ArrayToVector(unsigned char *a,

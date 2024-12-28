@@ -41,7 +41,7 @@ void RSAUtil::generateKeys(const string& publicKeyFile, const string& privateKey
 
     // Save public key
     FILE* publicFile = fopen(publicKeyFile.c_str(), "wb");
-    if (!publicFile || !PEM_write_RSA_PUBKEY(publicFile, rsa)) {
+    if (!publicFile || !PEM_write_RSAPublicKey(publicFile, rsa)) {
         fclose(publicFile);
         BN_free(bn);
         RSA_free(rsa);
@@ -54,15 +54,17 @@ void RSAUtil::generateKeys(const string& publicKeyFile, const string& privateKey
 }
 
 string RSAUtil::encrypt(const string& plaintext, const string& publicKeyFile) {
+    cout << publicKeyFile << endl;
     FILE* publicFile = fopen(publicKeyFile.c_str(), "rb");
     if (!publicFile) {
         throw runtime_error("Failed to open public key file.");
     }
+    cout << publicFile << endl;
 
     RSA* rsa = PEM_read_RSAPublicKey(publicFile, nullptr, nullptr, nullptr);
     fclose(publicFile);
     if (!rsa) {
-        throw runtime_error("Failed to read private key.");
+        throw runtime_error("Failed to read public key.");
     }
 
     vector<unsigned char> encrypted(RSA_size(rsa));

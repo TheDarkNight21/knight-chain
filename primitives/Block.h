@@ -15,6 +15,7 @@ struct Message {
     string encryptedMessage;   // Encrypted message content
     string messageHash;
     string messageID;
+    string storageLocation; // "local" or a link to the cloud storage
     string signature;
 
     // Convert a message to a string for hashing

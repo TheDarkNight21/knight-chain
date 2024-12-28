@@ -7,13 +7,11 @@
 
 class User {
 public:
-    User();
+    string userID;       // Public key or unique user identifier
+    string publicKey;    // User's public key
+    string privateKey;   // User's private key
+    bool useCloud;       // Preference: true for cloud, false for local-only
 
-    string getUserID();
-    string getPublicKey(const string userID);
-
-private:
-
+    User(string id, string pubKey, string privKey, bool cloudPreference);
 };
-
 #endif //USER_H

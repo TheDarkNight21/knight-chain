@@ -112,6 +112,10 @@ class AES {
   void printHexArray(unsigned char a[], unsigned int n);
 
   void printHexVector(std::vector<unsigned char> a);
+
+ static std::string CiphertextToHex(const std::vector<unsigned char>& ciphertext);
+
+ static std::vector<unsigned char> PadMessage(const std::string &message);
 };
 
 const unsigned char sbox[16][16] = {
