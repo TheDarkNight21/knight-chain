@@ -21,6 +21,29 @@ void Blockchain::AddBlock(Block bNew) {
     _vChain.push_back(bNew);
 }
 
+bool Blockchain::ValidateChain() const {
+        for (size_t i = 1; i < _vChain.size(); ++i) {
+            const Block& current = _vChain[i];
+            const Block& previous = _vChain[i - 1];
+
+            // Check if the current block's hash is valid
+            if (current.getHash() != current._CalculateHash()) {
+                return false; // Tampered block
+            }
+
+            // Check if the previous hash matches
+            if (current.sPrevHash != previous.getHash()) {
+                return false; // Broken chain
+            }
+        }
+        return true;
+    }
+
+void Blockchain::SaveToDisk(const string &filename) {
+
+}
+
+
 Block Blockchain::_GetLastBlock() const {
     return _vChain.back();
 }

@@ -16,10 +16,16 @@ public:
 
     void AddBlock(Block bNew); // adds a new block to the blockchain by linking it to the last block in the chain
 
+    void Blockchain::SaveToDisk(const string& filename);
+
+    void Blockchain::LoadFromDisk(const string& filename);
+
 private:
     uint32_t _nDifficulty; // determines how hard it is to mine a new block
     vector<Block> _vChain; // a vector (list) that stores all the blocks in the chain
+    bool ValidateChain() const;
 
     Block _GetLastBlock() const; // helper method to access the last block in the chain
+
 };
 #endif //BLOCKCHAIN_H

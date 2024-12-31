@@ -25,6 +25,7 @@ add_executable(firstBlockchain
         cryptoUtils/rsa.cpp
         cryptoUtils/aes.h
         cryptoUtils/aes.cpp
+        user.cpp
 )
 
 # Link OpenSSL libraries to the target

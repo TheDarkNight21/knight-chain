@@ -10,17 +10,28 @@
 using namespace std;
 
 struct Message {
-    string senderPublicKey;    // Public key of the sender
-    string recipientPublicKey;  // Public key of the receiver
-    string encryptedMessage;   // Encrypted message content
-    string messageHash;
     string messageID;
-    string storageLocation; // "local" or a link to the cloud storage
+    string conversationID;
+    string encryptedContent;
+    string senderID;
+    string recipientID;
+    string timestamp;
+    bool isGroupMessage;
+    string groupID;
     string signature;
 
     // Convert a message to a string for hashing
     string toString() const {
-        return senderPublicKey + recipientPublicKey + encryptedMessage + messageHash + messageID + signature;
+        // Concatenate all fields, including the boolean as a string
+        return messageID +
+               conversationID +
+               encryptedContent +
+                signature +
+               senderID +
+               recipientID +
+               timestamp +
+               (isGroupMessage ? "true" : "false") +
+               groupID;
     }
 };
 
@@ -30,9 +41,16 @@ public:
 
     Block(uint32_t nIndexIn, const vector<Message> &messagesIn); // constructor to init a new block with an index and some data
 
-    string getHash(); // returns hash of this block
+    string getHash() const; // returns hash of this block
 
     void MineBlock(uint32_t nDifficulty); // simulates the mining process by solving cryptographic puzzle.
+
+    string _CalculateHash() const; // private method to compute a blocks hash based on its data and other properties
+
+    bool ValidateMessages(const string& publicKeyFile) const;
+
+    string toString(Block block) const;
+
 
 private:
     uint32_t _nIndex; // position of block on chain
@@ -40,8 +58,6 @@ private:
     string _sHash; // hash of this block (unique identifier based on its content)
     time_t _tTime; //timestamp for when block was created
     vector<Message> _messages;  // Messages stored in this block
-
-    string _CalculateHash() const; // private method to compute a blocks hash based on its data and other properties
 };
 
 

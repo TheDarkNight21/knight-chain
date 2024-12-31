@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/firstBlockchain.dir/primitives/Block.cpp.o.d"
   "CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o"
   "CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.o.d"
+  "CMakeFiles/firstBlockchain.dir/user.cpp.o"
+  "CMakeFiles/firstBlockchain.dir/user.cpp.o.d"
   "firstBlockchain"
   "firstBlockchain.pdb"
 )

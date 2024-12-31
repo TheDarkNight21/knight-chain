@@ -247,3 +247,59 @@ string RSAUtil::sign(const string& message, const string& privateKeyFile) {
     // Return the signature as a string
     return string(signature.begin(), signature.end());
 }
+
+bool RSAUtil::validateMessage(const string& message, const string& signature, const string& publicKeyFile) {
+    // Open the public key file
+    FILE* publicFile = fopen(publicKeyFile.c_str(), "rb");
+    if (!publicFile) {
+        throw runtime_error("Failed to open public key file.");
+    }
+
+    // Read the public key
+    EVP_PKEY* pkey = PEM_read_PUBKEY(publicFile, nullptr, nullptr, nullptr);
+    fclose(publicFile);
+    if (!pkey) {
+        throw runtime_error("Failed to read public key.");
+    }
+
+    // Create a verification context
+    EVP_MD_CTX* mdCtx = EVP_MD_CTX_new();
+    if (!mdCtx) {
+        EVP_PKEY_free(pkey);
+        throw runtime_error("Failed to create message digest context.");
+    }
+
+    // Initialize the verification operation
+    if (EVP_DigestVerifyInit(mdCtx, nullptr, EVP_sha256(), nullptr, pkey) <= 0) {
+        EVP_MD_CTX_free(mdCtx);
+        EVP_PKEY_free(pkey);
+        throw runtime_error("Failed to initialize verification operation.");
+    }
+
+    // Add the message to the context
+    if (EVP_DigestVerifyUpdate(mdCtx, message.c_str(), message.size()) <= 0) {
+        EVP_MD_CTX_free(mdCtx);
+        EVP_PKEY_free(pkey);
+        throw runtime_error("Failed to add message to verification context.");
+    }
+
+    // Verify the signature
+    int verifyResult = EVP_DigestVerifyFinal(mdCtx,
+                                             reinterpret_cast<const unsigned char*>(signature.data()),
+                                             signature.size());
+
+    // Cleanup
+    EVP_MD_CTX_free(mdCtx);
+    EVP_PKEY_free(pkey);
+
+    // Check verification result
+    if (verifyResult == 1) {
+        // Signature is valid
+        return true;
+    } else if (verifyResult == 0) {
+        // Signature is invalid
+        return false;
+    } else {
+        throw runtime_error("Failed to verify the signature.");
+    }
+}

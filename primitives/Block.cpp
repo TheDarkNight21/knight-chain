@@ -4,7 +4,9 @@
 
 #include "Block.h"
 #include "../cryptoUtils/sha256.h"
+#include "../cryptoUtils/rsa.h"
 #include <sstream>
+#include <openssl/types.h>
 
 using namespace std;
 
@@ -13,7 +15,7 @@ Block::Block(uint32_t nIndexIn, const vector<Message> &messagesIn) : _nIndex(nIn
     _tTime = time(nullptr); // current time
 }
 
-string Block::getHash() {
+string Block::getHash() const {
     return _sHash;
 }
 
@@ -45,6 +47,24 @@ inline string Block::_CalculateHash() const {
     ss << _nNonce << sPrevHash;
 
     return sha256(ss.str());
+}
+
+bool Block::ValidateMessages(const string& publicKeyFile) const {
+    for (const auto& message : _messages) {
+        if (!RSAUtil::validateMessage(message.encryptedContent, message.signature, publicKeyFile)) {
+            return false; // Invalid message signature
+        }
+    }
+    return true;
+}
+
+string Block::toString(Block block) const {
+    string blockContent = "";
+    for (const auto &message : block._messages) {
+        blockContent += message.toString();
+    }
+    blockContent += to_string(_nIndex);
+    return blockContent + "\n";
 }
 
 

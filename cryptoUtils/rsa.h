@@ -17,6 +17,8 @@ public:
 
     // signs message using senders private key
     static string sign(const string& message, const string& privateKeyFile);
+
+    static bool validateMessage(const string& message, const string& signature, const string& privateKeyFile);
 };
 
 #endif // RSA_H

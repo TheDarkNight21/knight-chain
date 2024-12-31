@@ -273,6 +273,30 @@ primitives/Blockchain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/primitives/Blockchain.cpp.s
 .PHONY : primitives/Blockchain.cpp.s
 
+user.o: user.cpp.o
+.PHONY : user.o
+
+# target to build an object file
+user.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/user.cpp.o
+.PHONY : user.cpp.o
+
+user.i: user.cpp.i
+.PHONY : user.i
+
+# target to preprocess a source file
+user.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/user.cpp.i
+.PHONY : user.cpp.i
+
+user.s: user.cpp.s
+.PHONY : user.s
+
+# target to generate assembly for a file
+user.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firstBlockchain.dir/build.make CMakeFiles/firstBlockchain.dir/user.cpp.s
+.PHONY : user.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +324,9 @@ help:
 	@echo "... primitives/Blockchain.o"
 	@echo "... primitives/Blockchain.i"
 	@echo "... primitives/Blockchain.s"
+	@echo "... user.o"
+	@echo "... user.i"
+	@echo "... user.s"
 .PHONY : help
 
 
