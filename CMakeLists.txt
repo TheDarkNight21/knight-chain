@@ -11,6 +11,18 @@ set(OPENSSL_LIBRARIES /opt/homebrew/Cellar/openssl@3/3.4.0/lib)
 # Find OpenSSL
 find_package(OpenSSL REQUIRED)
 
+# Add FetchContent module for external dependencies
+include(FetchContent)
+
+# Fetch nlohmann/json library
+FetchContent_Declare(
+        json
+        GIT_REPOSITORY https://github.com/nlohmann/json.git
+        GIT_TAG v3.11.2 # Replace with the desired version
+)
+
+FetchContent_MakeAvailable(json)
+
 # Add the executable target and include all source files
 add_executable(firstBlockchain
         main.cpp
@@ -30,4 +42,4 @@ add_executable(firstBlockchain
 
 # Link OpenSSL libraries to the target
 target_include_directories(firstBlockchain PRIVATE ${OPENSSL_INCLUDE_DIR})
-target_link_libraries(firstBlockchain OpenSSL::SSL OpenSSL::Crypto)
+target_link_libraries(firstBlockchain OpenSSL::SSL OpenSSL::Crypto nlohmann_json::nlohmann_json)

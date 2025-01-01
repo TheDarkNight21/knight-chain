@@ -7,6 +7,9 @@
 #include "../cryptoUtils/rsa.h"
 #include <sstream>
 #include <openssl/types.h>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 using namespace std;
 
@@ -58,9 +61,9 @@ bool Block::ValidateMessages(const string& publicKeyFile) const {
     return true;
 }
 
-string Block::toString(Block block) const {
+string Block::toString() const {
     string blockContent = "";
-    for (const auto &message : block._messages) {
+    for (const auto &message : _messages) {
         blockContent += message.toString();
     }
     blockContent += to_string(_nIndex);

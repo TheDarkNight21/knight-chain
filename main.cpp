@@ -15,8 +15,8 @@ using namespace std;
 
 int main() {
     // Create messages
-    Message msg1 = {"AlicePublicKey", "BobPublicKey", "EncryptedHelloBob", "bobsHash", "message1ID", "cloud", "bobsSignature"};
-    Message msg2 = {"BobPublicKey", "AlicePublicKey", "EncryptedHelloAlice", "alicesHash", "message2ID", "cloud", "alicesSignature"};
+    Message msg1 = {"AlicePublicKey", "BobPublicKey", "EncryptedHelloBob", "bobsHash", "message1ID", "cloud", false, "groupID", "bobs signature"};
+    Message msg2 = {"BobPublicKey", "AlicePublicKey", "EncryptedHelloAlice", "alicesHash", "message2ID", "cloud", false, "groupID", "alices signature"};
 
     fs::path projectRoot = fs::current_path();
     if (projectRoot.has_parent_path()) {
@@ -102,8 +102,17 @@ int main() {
         knightChain.AddBlock(newBlock);
         cout << "block added." << endl;
 
+        knightChain.SaveToDisk("/Users/farisallaf/CLionProjects/knight-chain/blockchain/savedBlockchain.txt");
+        cout << "saved block added." << endl;
 
-    } catch (const std::exception& e) {
+        Blockchain loadedChain; // when blockchain initiated, genesis block is created every time. need to fix.
+        loadedChain.LoadFromDisk("/Users/farisallaf/CLionProjects/knight-chain/blockchain/savedBlockchain.txt");
+        cout << "blocks have been loaded." << endl;
+
+        loadedChain.SaveToDisk("/Users/farisallaf/CLionProjects/knight-chain/blockchain/savedBlockchain2.txt");
+        cout << "loaded blocks saved." << endl;
+
+    } catch (const exception& e) {
         cerr << "Error: " << e.what() << "\n";
     }
 

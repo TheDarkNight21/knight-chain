@@ -7,6 +7,9 @@
 
 #include <cstdint>
 #include <iostream>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 using namespace std;
 
 struct Message {
@@ -37,6 +40,19 @@ struct Message {
 
 class Block {
 public:
+
+    // Block(const Block&) = default; // Default copy constructor
+    // Block(Block&&) = default;      // Default move constructor
+    // Block& operator=(const Block&) = default; // Default copy assignment
+    // Block& operator=(Block&&) = default;      // Default move assignment
+
+    uint32_t _nIndex; // position of block on chain
+    int64_t _nNonce; // number used to solve the mining puzzle (part of hashing)
+    string _sHash; // hash of this block (unique identifier based on its content)
+    time_t _tTime; //timestamp for when block was created
+    vector<Message> _messages;  // Messages stored in this block
+
+
     string sPrevHash; // hash of previous box - stored for linking
 
     Block(uint32_t nIndexIn, const vector<Message> &messagesIn); // constructor to init a new block with an index and some data
@@ -49,15 +65,10 @@ public:
 
     bool ValidateMessages(const string& publicKeyFile) const;
 
-    string toString(Block block) const;
+    string toString() const;
 
 
 private:
-    uint32_t _nIndex; // position of block on chain
-    int64_t _nNonce; // number used to solve the mining puzzle (part of hashing)
-    string _sHash; // hash of this block (unique identifier based on its content)
-    time_t _tTime; //timestamp for when block was created
-    vector<Message> _messages;  // Messages stored in this block
 };
 
 

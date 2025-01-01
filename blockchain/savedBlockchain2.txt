@@ -1,0 +1,64 @@
+[
+    {
+        "hash": "",
+        "index": 0,
+        "messages": [
+            {
+                "conversationID": "receiver1",
+                "encryptedContent": "genesis block1",
+                "groupID": "",
+                "isGroupMessage": false,
+                "messageID": "sender1",
+                "recipientID": "",
+                "senderID": "signature1",
+                "signature": "",
+                "timestamp": ""
+            },
+            {
+                "conversationID": "receiver2",
+                "encryptedContent": "genesis block2",
+                "groupID": "",
+                "isGroupMessage": false,
+                "messageID": "sender2",
+                "recipientID": "",
+                "senderID": "signature2",
+                "signature": "",
+                "timestamp": ""
+            }
+        ],
+        "nonce": -1,
+        "prevHash": "",
+        "timestamp": 1735695543
+    },
+    {
+        "hash": "00eb7d59e9e16f954141ab548cf209317aee09dfa395ffbda9a1151206077097",
+        "index": 1,
+        "messages": [
+            {
+                "conversationID": "BobPublicKey",
+                "encryptedContent": "EncryptedHelloBob",
+                "groupID": "groupID",
+                "isGroupMessage": false,
+                "messageID": "AlicePublicKey",
+                "recipientID": "message1ID",
+                "senderID": "bobsHash",
+                "signature": "bobs signature",
+                "timestamp": "cloud"
+            },
+            {
+                "conversationID": "AlicePublicKey",
+                "encryptedContent": "EncryptedHelloAlice",
+                "groupID": "groupID",
+                "isGroupMessage": false,
+                "messageID": "BobPublicKey",
+                "recipientID": "message2ID",
+                "senderID": "alicesHash",
+                "signature": "alices signature",
+                "timestamp": "cloud"
+            }
+        ],
+        "nonce": 210,
+        "prevHash": "",
+        "timestamp": 1735695543
+    }
+]

@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /opt/homebrew/Cellar/openssl@3/3.4.0/include
+CXX_INCLUDES = -I/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/_deps/json-src/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.0/include
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
 

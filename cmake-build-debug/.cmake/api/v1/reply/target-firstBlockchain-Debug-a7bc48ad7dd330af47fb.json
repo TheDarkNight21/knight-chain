@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 27,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 33,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 32,
+				"line" : 44,
 				"parent" : 0
 			}
 		]
@@ -55,6 +55,10 @@
 			"includes" : 
 			[
 				{
+					"backtrace" : 2,
+					"path" : "/Users/farisallaf/CLionProjects/knight-chain/cmake-build-debug/_deps/json-src/include"
+				},
+				{
 					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/homebrew/Cellar/openssl@3/3.4.0/include"
@@ -65,7 +69,7 @@
 			{
 				"backtraces" : 
 				[
-					1
+					2
 				],
 				"standard" : "20"
 			},
